@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -16,6 +16,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import 'react-native-reanimated';
 
 import {
   Colors,
@@ -56,7 +57,8 @@ function Section({children, title}: SectionProps): JSX.Element {
 }
 
 function App(): JSX.Element {
-  console.warn('...');
+  console.warn('...'); // "Invalid hook call..." error
+  // useEffect(() => console.warn('...'), []); // <- This generates a different error - "property is not configurable"
 
   const isDarkMode = useColorScheme() === 'dark';
 
