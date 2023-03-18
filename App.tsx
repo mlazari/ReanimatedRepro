@@ -56,6 +56,8 @@ function Section({children, title}: SectionProps): JSX.Element {
 }
 
 function App(): JSX.Element {
+  console.warn('...');
+
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
