@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "18.2.0",
     "react-native": "0.71.4",
-    "react-native-reanimated": "^3.0.2"
+    "react-native-reanimated": "https://github.com/software-mansion/react-native-reanimated.git#@acynk/fix-console-bug"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
