@@ -59,6 +59,9 @@ function Section({children, title}: SectionProps): JSX.Element {
 function App(): JSX.Element {
   // console.warn('...'); // "Invalid hook call..." error
   // useEffect(() => console.warn('...'), []); // <- This generates a different error - "property is not configurable"
+  useEffect(() => {
+    console.trace('Test');
+  }, []);
 
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -75,9 +78,9 @@ function App(): JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        {[1, 2].map(i => (
+        {/* {[1, 2].map(i => (
           <Header />
-        ))}
+        ))} */}
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
